@@ -1,0 +1,23 @@
+.App {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.appButton{
+    text-align: center;
+    width: 25%;
+    background-color: #E76161;
+    color: #f7fffe;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 14px;
+    border: 1px solid #f45d5d;
+    margin: 19px;
+}
+
+.porfolioList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
