@@ -1,0 +1,10 @@
+.portfolio {
+    width: 350px;
+}
+
+.portfolioDiv{
+    margin: 10px;
+    border: 1px solid #F99B7D;
+    padding: 10px;
+    border-radius: 5px;
+}
