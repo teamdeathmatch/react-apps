@@ -1,22 +1,22 @@
 import { useState } from "react";
 
-function TaskCreate({onCreate}) {
-  const [title, setTitle] = useState('');
-  const [taskDesc, setTaskDesc] = useState('');
+function TaskCreate({ onCreate }) {
+  const [title, setTitle] = useState("");
+  const [taskDesc, setTaskDesc] = useState("");
 
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
 
-  const handleTaskDesc =(event)=> {
+  const handleTaskDesc = (event) => {
     setTaskDesc(event.target.value);
   };
 
-  const handleSubmit = (event)=> {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onCreate(title, taskDesc);
-    setTitle('');
-    setTaskDesc('');
+    setTitle("");
+    setTaskDesc("");
   };
 
   return (
@@ -26,8 +26,15 @@ function TaskCreate({onCreate}) {
         <label className="task-label">Başlık</label>
         <input value={title} onChange={handleChange} className="task-input" />
         <label className="task-label">Task giriniz</label>
-        <textarea value={taskDesc} onChange={handleTaskDesc} className="task-textarea" rows={5} />
-        <button onClick={handleSubmit} className="task-button">Oluştur</button>
+        <textarea
+          value={taskDesc}
+          onChange={handleTaskDesc}
+          className="task-textarea"
+          rows={5}
+        />
+        <button onClick={handleSubmit} className="task-button">
+          Oluştur
+        </button>
       </form>
     </div>
   );
