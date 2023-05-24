@@ -4,12 +4,25 @@
   align-items: center;
 }
 .task-title {
-  color: #ffffff;
-  margin-top: 55px;
+  color: #b1a3a1;
+  margin-top: 30px;
   text-align: center;
-  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);;
+  background: radial-gradient(circle at 7.5% 24%, #f5d6d34d 12.3%, #e0e0e07c 63.8%);
   padding: 20px;
-  border-radius: 55px 5px 55px 5px;
+  border: 1px solid #b1a3a15e;
+  border-radius:  100px 100px 5px 5px;
+  width: 400px;
+  height: 22px;
+  margin-bottom: 20px;
+
+  /* color: #b1a3a1;
+  margin-top: 35px;
+  text-align: center;
+  background: radial-gradient(circle at 7.5% 24%, #f5d6d34d 12.3%, #e0e0e07c 63.8%);
+  border: 1px solid #b1a3a15e;
+  padding: 20px;
+  border-radius:  100px 100px 5px 5px;
+  width: 650px; */
 }
 
 .task-create {
@@ -17,7 +30,7 @@
 }
 
 .task-label {
-  color:rgb(250, 178, 172);
+  color:rgb(93, 86, 85);
   padding: 7px;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -30,55 +43,77 @@
 
 .task-input {
   padding: 10px;
-  border: 1px solid rgb(250, 178, 172);
-  border-radius: 10px;
+  border: 1px solid #b1a3a1;;
+  border-radius: 1px 25px;
   font-weight: bold;
-  color: rgb(152, 203, 180);
+  color: #a28885;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .task-textarea {
   padding: 10px;
-  border: 1px solid  rgb(250, 178, 172);
-  border-radius: 10px;
+  border: 1px solid #b1a3a1;
+  border-radius: 1px 25px;
   margin-bottom: 15px;
-  color: rgb(152, 203, 180);
+  color: #a28885;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .task-button {
   padding: 10px;
-  color: #faf8fa;
+  color: #ffffff;
   font-weight: bold;
-  background-color: rgb(135, 180, 160);;
+  background-color:#b1a3a1;
   border: none;
-  border-radius: 14px;
+  border-radius: 1px 20px;
   justify-content: center;
   font-size: 15px;
 }
+.task-button:hover {
+  background-color:#6f605e;
+}
+.issues{
+  color: #b1a3a1;
+  margin-top: 30px;
+  text-align: center;
+  background: radial-gradient(circle at 7.5% 24%, #f5d6d34d 12.3%, #e0e0e07c 63.8%);
+  padding: 20px;
+  border: 1px solid #b1a3a15e;
+  border-radius:  5px 5px 100px 100px;
+  width: 450px;
+  height: 22px;
+  margin-bottom: 0px;
+}
+
 .task-list{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px;
   }
 
 .task-show {
-  border: 1px solid #e92e042e;
-  border-radius: 45px;
-  width: 300px;
+  border: 1px solid #a2888542;;
+  border-radius: 1px 25px;
+  width: 330px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   margin: 20px;
 }
 
 .button-bar {
   display: flex;
+  margin-top: 20px;
+
 }
 
+
 .button-del {
-  background-color: #fc6b6b;
-  border:1px solid #e92e04f1;
+  background-color: #bc3425;
+  border: none;
   color: white;
   padding: 5px;
   font-size: 15px;
@@ -89,8 +124,8 @@
 }
 
 .button-upd {
-  background-color: #76d010b3;
-  border: 1px solid #66b908e7;
+  background-color: #459364;
+  border:none;
   color: white;
   padding: 5px;
   font-size: 15px;
@@ -101,11 +136,11 @@
 }
 
 .taskList-title{
-color:rgb(70, 181, 131);
+color:#a28885;
 margin-bottom: 2px;
 }
 
 .taskList-todo{
-color: rgb(240, 159, 151);
+color: #a28885;
 margin-top: 2px;
 }
