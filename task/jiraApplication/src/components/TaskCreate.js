@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function TaskCreate({ onCreate }) {
+function TaskCreate({ onCreate, task, taskformUpdate }) {
   const [title, setTitle] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
 
@@ -8,7 +8,7 @@ function TaskCreate({ onCreate }) {
     setTitle(event.target.value);
   };
 
-  const handleTaskDesc = (event) => {
+  const handleTaskChange = (event) => {
     setTaskDesc(event.target.value);
   };
 
@@ -20,22 +20,53 @@ function TaskCreate({ onCreate }) {
   };
 
   return (
-    <div className="task-create">
-      <h3 className="task-title">Lütfen Task Ekleyiniz</h3>
-      <form className="task-form">
-        <label className="task-label">Başlık</label>
-        <input value={title} onChange={handleChange} className="task-input" />
-        <label className="task-label">Task giriniz</label>
-        <textarea
-          value={taskDesc}
-          onChange={handleTaskDesc}
-          className="task-textarea"
-          rows={5}
-        />
-        <button onClick={handleSubmit} className="task-button">
-          Oluştur
-        </button>
-      </form>
+    <div>
+      {" "}
+      {taskformUpdate ? (
+        <div className="task-create">
+          <h3 className="task-title">Lütfen Task Ekleyiniz</h3>
+          <form className="task-form">
+            <label className="task-label">Başlık</label>
+            <input
+              value={title}
+              onChange={handleChange}
+              className="task-input"
+            />
+            <label className="task-label">Task giriniz</label>
+            <textarea
+              value={taskDesc}
+              onChange={handleTaskChange}
+              className="task-textarea"
+              rows={5}
+            />
+            <button onClick={handleSubmit} className="task-button">
+              Oluştur
+            </button>
+          </form>
+        </div>
+      ) : (
+        <div className="task-create">
+          <h3 className="task-title">Lütfen Task Ekleyiniz</h3>
+          <form className="task-form">
+            <label className="task-label">Başlık</label>
+            <input
+              value={title}
+              onChange={handleChange}
+              className="task-input"
+            />
+            <label className="task-label">Task giriniz</label>
+            <textarea
+              value={taskDesc}
+              onChange={handleTaskChange}
+              className="task-textarea"
+              rows={5}
+            />
+            <button onClick={handleSubmit} className="task-button">
+              Oluştur
+            </button>
+          </form>
+        </div>
+      )}
     </div>
   );
 }

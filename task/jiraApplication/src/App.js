@@ -27,7 +27,7 @@ setTasks(afterDeletingTasks);
   return (
     <div className="App">
       <TaskCreate onCreate={createTask} />
-      <h3 className='issues' >Görevler</h3>
+      <h1 className='issues' >Görevler</h1>
       <TaskList tasks = {tasks} onDelete={deleteTaskById}/>
     </div>
   );
