@@ -4,10 +4,11 @@
   align-items: center;
 }
 .task-title {
-  color: #b1a3a1;
+  color: #424242;
   margin-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
-  padding: 20px;
+ padding-top: 30px;
 }
 
 .task-create {
@@ -15,7 +16,7 @@
 }
 
 .task-label {
-  color:rgb(93, 86, 85);
+  color:rgb(91, 84, 83);
   padding: 7px;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -28,20 +29,20 @@
 
 .task-input {
   padding: 10px;
-  border: 1px solid #b1a3a1;;
-  border-radius: 1px 25px;
+  border: 1px solid #524a49;;
+  border-radius: 1px 9px;
   font-weight: bold;
-  color: #a28885;
+  color: #554a49;
   font-size: 15px;
   font-weight: bold;
 }
 
 .task-textarea {
   padding: 10px;
-  border: 1px solid #b1a3a1;
-  border-radius: 1px 25px;
+  border: 1px solid #5c5554;
+  border-radius: 1px 9px;
   margin-bottom: 15px;
-  color: #a28885;
+  color: #575150;
   font-size: 15px;
   font-weight: bold;
 }
@@ -50,9 +51,9 @@
   padding: 10px;
   color: #ffffff;
   font-weight: bold;
-  background-color:#b1a3a1;
+  background-color:#6c6b6b;
   border: none;
-  border-radius: 1px 20px;
+  border-radius: 1px 10px;
   justify-content: center;
   font-size: 15px;
 }
@@ -60,8 +61,9 @@
   background-color:#6f605e;
 }
 .issues{
-  color: #b1a3a1;
-  margin-top: 20px; 
+  color: #594e4c;
+  margin-top: 40px; 
+  margin-bottom:10px;
 }
 
 .task-list{
@@ -69,9 +71,14 @@
   flex-wrap: wrap;
   justify-content: center;
   }
+.taskShow-list{
+  margin: 5px;
+  padding: 5px;
+}
+
 
 .task-show {
-  border: 1px solid #a2888542;;
+  border: 1px solid #a2888590;;
   border-radius: 1px 25px;
   width: 330px;
   display: flex;
@@ -79,6 +86,7 @@
   align-items: center;
   padding-bottom: 15px;
   margin: 20px;
+  margin-top: 10px;
 }
 
 .button-bar {
@@ -89,7 +97,7 @@
 
 
 .button-del {
-  background-color: #bc3425;
+  background-color: #e1aa20e4;
   border: none;
   color: white;
   padding: 5px;
@@ -101,7 +109,7 @@
 }
 
 .button-upd {
-  background-color: #459364;
+  background-color: #2caa50;
   border:none;
   color: white;
   padding: 5px;
@@ -113,11 +121,15 @@
 }
 
 .taskList-title{
-color:#a28885;
+color:#575151;
 margin-bottom: 2px;
 }
 
 .taskList-todo{
-color: #a28885;
+color: #655755;
 margin-top: 2px;
+}
+
+.task-update{
+  width:100%;
 }

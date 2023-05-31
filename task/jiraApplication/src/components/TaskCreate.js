@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function TaskCreate({ onCreate, task, taskformUpdate }) {
-  const [title, setTitle] = useState("");
-  const [taskDesc, setTaskDesc] = useState("");
+function TaskCreate({ onCreate, task, taskformUpdate,onUpdate }) {
+  const [title, setTitle] = useState(task ? task.title : '');
+  const [taskDesc, setTaskDesc] = useState(task ? task.taskDesc : '');
 
   const handleChange = (event) => {
     setTitle(event.target.value);
@@ -14,7 +14,13 @@ function TaskCreate({ onCreate, task, taskformUpdate }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onCreate(title, taskDesc);
+    if (taskformUpdate){
+      onUpdate(task.id,title,taskDesc)
+    }
+    else {
+      onCreate(title, taskDesc);
+    }
+    
     setTitle("");
     setTaskDesc("");
   };
@@ -23,16 +29,16 @@ function TaskCreate({ onCreate, task, taskformUpdate }) {
     <div>
       {" "}
       {taskformUpdate ? (
-        <div className="task-create">
-          <h3 className="task-title">Lütfen Task Ekleyiniz</h3>
+        <div className="task-update">
+          <h3 className="task-title">Lütfen Taskı Düzenleyiniz</h3>
           <form className="task-form">
-            <label className="task-label">Başlık</label>
+            <label className="task-label">Lütfen başlığı düzenleyiniz. </label>
             <input
               value={title}
               onChange={handleChange}
               className="task-input"
             />
-            <label className="task-label">Task giriniz</label>
+            <label className="task-label">Taskı düzenleyiniz.</label>
             <textarea
               value={taskDesc}
               onChange={handleTaskChange}
@@ -40,7 +46,7 @@ function TaskCreate({ onCreate, task, taskformUpdate }) {
               rows={5}
             />
             <button onClick={handleSubmit} className="task-button">
-              Oluştur
+              Düzenle
             </button>
           </form>
         </div>
