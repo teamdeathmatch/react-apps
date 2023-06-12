@@ -1,0 +1,49 @@
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskcreate {
+  width: 450px;
+}
+
+.formarea {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputarea{
+  padding: 5px;
+}
+
+.create {
+    font-weight: bolder;
+    width: 100px;
+    align-self: center;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px 5px 13spx 13px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: rgb(89, 88, 88);
+
+}
+
+.tasktext {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.taskdesc {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.taskdescarea {
+  height: 129px;
+  width: 447px;
+}
+
+
