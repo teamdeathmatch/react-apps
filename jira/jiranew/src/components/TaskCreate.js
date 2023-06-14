@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
  
-function TaskCreate() {
+function TaskCreate({onCreate}) {
     const [title, setTitle] = useState("")
     const [taskDesc, setTaskDesc] = useState("")
 
@@ -8,16 +8,17 @@ function TaskCreate() {
         setTitle(event.target.value);
     }
     const handleTaskDescChange= (event)=> {
-        //console.log(event.target.value);
         setTaskDesc (event.target.value);
     }
 
     const handleSubmit= (event)=> {
         event.preventDefault();
-
-    console.log(taskDesc, title);
-        
+        onCreate(title, taskDesc);
+        setTitle('');
+        setTaskDesc('');
     }
+
+
     
     return ( 
         <div className="taskcreate" >
