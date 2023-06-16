@@ -45,5 +45,19 @@
   height: 129px;
   width: 447px;
 }
+.task-list{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
 
+.task-show {
+    width: 350px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 17px;
+    margin: 10px;
+}
 
